@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nasa Articles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+          <div>
+            <h1>These are the Current Top Articles from NASA</h1>
+          </div>      
+          <!-- Nasa -->
+          <div class="row">
+            <div class="col-md-12">
+                <table>
+                    {% for article in article_list %}
+                        {% for entry in article %}
+                        <tr>
+                        <td>{{ entry }}</td>
+                        <td>{{ article[entry] }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+            </div>
+          </div>
+      
+        </div>
+      </body>
+</html>
